@@ -14,4 +14,6 @@
     <!-- Keyguard affordance circle background -->
     <color name="keyguard_affordance_circle_background">@android:color/white</color>
 
+    <!-- Pixel theme -->
+    <color name="pixel_primary_color">#242424</color>
 </resources>
