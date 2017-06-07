@@ -104,8 +104,6 @@ public class NotificationPanelView extends PanelView implements
             "cmsystem:" + CMSettings.System.DOUBLE_TAP_SLEEP_ANYWHERE;
     private static final String LOCK_SCREEN_WEATHER_ENABLED =
             "cmsecure:" + CMSettings.Secure.LOCK_SCREEN_WEATHER_ENABLED;
-    private static final String DOUBLE_TAP_SLEEP_ANYWHERE =
-            "cmsecure:" + CMSettings.Secure.DOUBLE_TAP_SLEEP_ANYWHERE;
 
     private static final Rect mDummyDirtyRect = new Rect(0, 0, 1, 1);
 
@@ -233,7 +231,6 @@ public class NotificationPanelView extends PanelView implements
     private boolean mDoubleTapToSleepEnabled;
     private int mStatusBarHeaderHeight;
     private GestureDetector mDoubleTapGesture;
-    private boolean mDoubleTapToSleepAnywhere;
 
     private boolean mKeyguardWeatherEnabled;
     private TextView mKeyguardWeatherInfo;
@@ -2476,9 +2473,6 @@ public class NotificationPanelView extends PanelView implements
                         && wasKeyguardWeatherEnabled != mKeyguardWeatherEnabled) {
                     onWeatherChanged(mWeatherController.getWeatherInfo());
                 }
-                break;
-            case DOUBLE_TAP_SLEEP_ANYWHERE:
-                mDoubleTapToSleepAnywhere = newValue == null || Integer.parseInt(newValue) == 1;
                 break;
             default:
                 break;
