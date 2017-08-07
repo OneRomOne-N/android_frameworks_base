@@ -669,7 +669,11 @@ public class AccessPoint implements Comparable<AccessPoint> {
     }
 
     void loadConfig(WifiConfiguration config) {
-        ssid = (config.SSID == null ? "" : removeDoubleQuotes(config.SSID));
+        if (config.isPasspoint())
+            ssid = config.providerFriendlyName;
+        else
+            ssid = (config.SSID == null ? "" : removeDoubleQuotes(config.SSID));
+
         bssid = config.BSSID;
         security = getSecurity(config);
         networkId = config.networkId;
