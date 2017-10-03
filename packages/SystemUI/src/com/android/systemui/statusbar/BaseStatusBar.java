@@ -2790,7 +2790,6 @@ public abstract class BaseStatusBar extends SystemUI implements
         lp.setTitle("GestureAnywhereView");
 
         return lp;      
-       }
     }
        
     public boolean isCameraAllowedByAdmin() {
