@@ -37,6 +37,9 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.provider.Settings;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
+import android.telephony.TelephonyManager;
 
 import com.android.systemui.R;
 import com.android.systemui.statusbar.phone.StatusBarIconController;
