@@ -511,6 +511,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             resolver.registerContentObserver(Settings.System.getUriFor(
                   Settings.System.QS_ROWS_LANDSCAPE),
                   false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.NO_SIM_CLUSTER_SWITCH),
+                    false, this, UserHandle.USER_ALL);
 		    update();
         }
 
@@ -538,6 +541,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     || uri.equals(Settings.System.getUriFor(
                     Settings.System.QS_COLUMNS_PORTRAIT))) {
                 	updateResources();
+           } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.NO_SIM_CLUSTER_SWITCH))) {
+                    trytoinflateclusters();
            } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.QS_ROWS_LANDSCAPE))
                     || uri.equals(Settings.System.getUriFor(
@@ -5719,4 +5725,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 break;
         }
     }
+   public void trytoinflateclusters() {
+      try {
+          inflateSignalClusters();
+      } catch (Exception e) {
+      }
+   }
 }
