@@ -788,6 +788,8 @@
     <string name="recents_incompatible_app_message">App doesn\'t support split screen</string>
     <!-- Recents: Hint text that shows on the drop targets to start multiwindow. [CHAR LIMIT=NONE] -->
     <string name="recents_drag_hint_message">Drag here to use split screen</string>
+    <!-- Recents: Free Memory Bar Text. [CHAR LIMIT=NONE] -->
+    <string name="recents_free_ram">Free RAM: %1$d MB</string>
 
     <!-- Recents: MultiStack add stack split horizontal radio button. [CHAR LIMIT=NONE] -->
     <string name="recents_multistack_add_stack_dialog_split_horizontal">Split Horizontal</string>
